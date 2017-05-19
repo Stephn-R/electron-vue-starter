@@ -2,14 +2,23 @@
 // MODULES
 
 import Vue from 'vue';
-import Component from 'vue-class-component';
+import Router from 'vue-router';
+import Vuex from 'vuex';
 
 import App from './App.vue';
+import routes from './routes';
 
 // ────────────────────────────────────────────────────────────────────────────────
+// Middleware
 
-// mount
+Vue.use(Router);
+
+// ────────────────────────────────────────────────────────────────────────────────
+// MOUNTING
+
+const router = new Router({ routes });
+
 new Vue({
-  el: '#app',
-  render: (h) => h(App, {}),
-});
+  router,
+  ...(<any>App),
+}).$mount('#app');

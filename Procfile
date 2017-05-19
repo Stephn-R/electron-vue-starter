@@ -1,2 +1,2 @@
 app: electron .
-webpack: webpack -w
+webpack: webpack-dev-server

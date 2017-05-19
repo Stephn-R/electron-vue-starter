@@ -1,7 +1,21 @@
 {
-  "extends": "tslint:recommended",
+  "extends": [
+    "tslint-microsoft-contrib"
+  ],
   "rules": {
+    "import-name": false,
+    "missing-jsdoc": false,
+    "no-default-export": false,
+    "no-relative-imports": false,
+    "no-require-imports": false,
+    "no-unused-expression": false,
     "quotemark": ["single", true],
-    "no-unused-expression": false
+    "trailing-comma": [ true ],
+    "typedef": [ false ],
+    "no-any": false,
+    "align": [ false ],
+    "export-name": false,
+    "function-name": false,
+    "no-shadowed-variable": false
   }
 }

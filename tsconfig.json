@@ -10,10 +10,10 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
-    "outDir": "dist",
+    "outDir": "./dist",
     "preserveConstEnums": true,
     "removeComments": true,
-    "rootDir": "app",
+    "rootDir": "./app",
     "sourceMap": false,
     "target": "es5",
     "lib": [
@@ -22,6 +22,9 @@
       "es2015.promise"
     ]
   },
-  "compileOnSave": false,
-  "buildOnSave": false
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "compileOnSave": false
 }

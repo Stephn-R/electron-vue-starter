@@ -1,15 +1,16 @@
 <template>
-  <div>{{message}}</div>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
-<script>
+<script lang="ts">
 
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import store from './vuex';
 
-@Component()
-export default class App extends Vue {
-  message = 'Hello World!';
-}
+export default {
+  components: {},
+  store,
+};
 
 </script>
