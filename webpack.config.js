@@ -13,7 +13,7 @@ process.env = require('./config/settings.json');
 
 module.exports = {
   entry:          {
-    app: [ './app/index.ts' ],
+    app: [ './app/index.js' ],
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -22,7 +22,7 @@ module.exports = {
     sourceMapFilename: '[name].map'
   },
   resolve: {
-    extensions: ['.js', '.ts', '.html'],
+    extensions: ['.js', '.ts'],
     modules: ['node_modules'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
@@ -31,11 +31,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.vue$/,
         use: [
-          'awesome-typescript-loader',
+          'vue-loader',
         ],
-        exclude: /(node_modules)/,
       },
       {
         test: /\.js$/,
@@ -43,22 +42,6 @@ module.exports = {
           'babel-loader',
         ],
         exclude: /(node_modules)/,
-      },
-      {
-        test: /\.(sass|scss)$/,
-        use: [
-          'css-to-string-loader',
-          'css-loader?sourceMap',
-          'postcss-loader',
-          'sass-loader?sourceMap',
-        ],
-      },
-      {
-        test: /\.html$/,
-        use: [
-          'vue-loader',
-          'html-loader'
-        ],
       },
       {
         test: /\.(png|jpg|jpeg)$/,
