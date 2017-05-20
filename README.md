@@ -1,4 +1,4 @@
-# Nighthawk
+# Electron Vue.js Starter
 
 For local development:
 
