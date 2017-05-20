@@ -1,16 +1,24 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
-  </div>
+  <v-app id="app">
+    <v-toolbar>
+      <v-toolbar-title>Electron App + Vue.js</v-toolbar-title>
+    </v-toolbar>
+    <main>
+      <v-content>
+        <v-container fluid>
+          <router-view></router-view>
+        </v-container>
+      </v-content>
+    </main>
+  </v-app>
 </template>
 
 <script lang="ts">
 
-import store from './vuex';
-
 export default {
-  components: {},
-  store,
+  components: {}
 };
 
 </script>
+
+<style lang="stylus" src="./main.styl"></style>

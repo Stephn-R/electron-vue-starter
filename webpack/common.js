@@ -58,6 +58,14 @@ module.exports = {
           'babel-loader',
         ],
         exclude: /(node_modules)/,
+      },
+      {
+        test: /\.styl$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
       }
     ],
   },
