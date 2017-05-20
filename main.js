@@ -5,12 +5,10 @@ const path = require('path');
 const {app, BrowserWindow} = require('electron');
 const installExt = require('electron-devtools-installer');
 
-// Install `electron-debug` with `devtron`
-require('electron-debug')({ showDevTools: true });
-
 // Install `vue-devtools`
 app.on('ready', () => {
   if (process.env.NODE_ENV === 'development') {
+    require('electron-debug')({ showDevTools: true });
     installExt.default(installExt.VUEJS_DEVTOOLS)
     .then(name => console.log(`Added Extensions: ${name}`))
     .catch(err => console.log('Unable to install devtools: ', err));

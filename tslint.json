@@ -3,19 +3,21 @@
     "tslint-microsoft-contrib"
   ],
   "rules": {
-    "import-name": false,
-    "missing-jsdoc": false,
-    "no-default-export": false,
-    "no-relative-imports": false,
-    "no-require-imports": false,
-    "no-unused-expression": false,
-    "quotemark": ["single", true],
-    "trailing-comma": [ true ],
-    "typedef": [ false ],
-    "no-any": false,
     "align": [ false ],
     "export-name": false,
     "function-name": false,
-    "no-shadowed-variable": false
+    "import-name": false,
+    "missing-jsdoc": false,
+    "no-any": false,
+    "no-default-export": false,
+    "no-reference": false,
+    "no-relative-imports": false,
+    "no-require-imports": false,
+    "no-shadowed-variable": false,
+    "no-unused-expression": false,
+    "no-var-requires": false,
+    "quotemark": ["single", true],
+    "trailing-comma": [ true ],
+    "typedef": [ false ]
   }
 }

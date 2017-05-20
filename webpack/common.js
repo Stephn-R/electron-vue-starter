@@ -8,7 +8,7 @@ const autoprefixer = require('autoprefixer');
 
 // ────────────────────────────────────────────────────────────────────────────────
 
-const outputDir = path.resolve(__dirname, 'dist');
+const outputDir = path.resolve(__dirname, '..', 'dist');
 
 module.exports = {
   target: 'electron-renderer',
@@ -22,10 +22,7 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.ts', '.vue'],
-    modules: [ 'node_modules' ],
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    }
+    modules: [ 'node_modules' ]
   },
   module: {
     rules: [

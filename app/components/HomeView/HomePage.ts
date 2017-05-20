@@ -1,6 +1,13 @@
+// ────────────────────────────────────────────────────────────────────────────────
+// MODULES
+
 import Vue from 'vue';
 import {Component} from 'vue-property-decorator';
 import { mapActions, mapGetters } from 'vuex';
+
+const electron = require('electron');
+
+// ────────────────────────────────────────────────────────────────────────────────
 
 @Component({
   name: 'home-page',
