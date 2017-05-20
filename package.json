@@ -1,7 +1,7 @@
 {
   "name": "nighthawk",
   "version": "1.0.0",
-  "description": "a desktop application to assist with events projects",
+  "description": "an electron app built using vue.js",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

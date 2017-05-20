@@ -13,7 +13,7 @@ const outputDir = path.resolve(__dirname, 'dist');
 module.exports = {
   target: 'electron-renderer',
   entry: {
-    app: [ './app/index.ts', ],
+    app: [ path.resolve(__dirname, '..', 'app', 'index.ts') ],
   },
   output: {
     path: outputDir,
